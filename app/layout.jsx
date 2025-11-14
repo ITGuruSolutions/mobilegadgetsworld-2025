@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
     return publishableKey ? (
-        <ClerkProvider>
+        <ClerkProvider publishableKey={publishableKey}>
             <html lang="en">
                 <body className={`${outfit.className} antialiased`}>
                     <StoreProvider>
